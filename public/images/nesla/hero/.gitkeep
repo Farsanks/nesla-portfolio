@@ -1,0 +1,3 @@
+# Place genuine hero photographs here, e.g. nesla-hero.webp
+# Then set images.hero.src = '/images/nesla/hero/nesla-hero.webp' in
+# src/data/portfolioData.js to swap the placeholder for the real photo.

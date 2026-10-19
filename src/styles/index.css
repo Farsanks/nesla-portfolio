@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Emerald Editorial — global base styles. */
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-ink-950 text-paper font-sans antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Visible, emerald focus ring for keyboard users. */
+  :focus-visible {
+    outline: 2px solid theme('colors.emerald.DEFAULT');
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* Respect reduced-motion globally. Individual animations also check
+     prefers-reduced-motion via the useReducedMotionPreference hook. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+
+  ::selection {
+    background-color: rgba(0, 200, 120, 0.28);
+    color: #ffffff;
+  }
+}
+
+@layer components {
+  /* Thin emerald hairline used across section dividers and frames. */
+  .hairline {
+    @apply border-hairline;
+  }
+}

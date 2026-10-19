@@ -1,0 +1,17 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# SPA fallback so deep links (e.g. /seo, /blog/:slug) work on direct access.
+# Netlify serves existing static files (assets, images, robots, sitemap)
+# before applying this redirect.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Long-cache fingerprinted assets.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

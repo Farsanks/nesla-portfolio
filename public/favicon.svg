@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Nesla Fathima monogram">
+  <rect width="64" height="64" rx="14" fill="#050706" />
+  <rect x="1.5" y="1.5" width="61" height="61" rx="12.5" fill="none" stroke="#00C878" stroke-opacity="0.5" stroke-width="1.5" />
+  <text x="32" y="43" font-family="'Space Grotesk', sans-serif" font-size="28" font-weight="700" text-anchor="middle" fill="#00C878">NF</text>
+</svg>
